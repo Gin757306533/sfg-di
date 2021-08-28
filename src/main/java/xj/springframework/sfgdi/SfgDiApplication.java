@@ -14,6 +14,8 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext cac = SpringApplication.run(SfgDiApplication.class, args);
 		MyController myController = (MyController) cac.getBean("myController");
+
+		System.out.println("----- primary bean");
 		String greeting = myController.sayHello();
 		System.out.println(greeting);
 
